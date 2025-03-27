@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.76c62744.css",
+    "main.js": "/static/js/main.e6140d7b.js",
+    "static/media/stockholm.mp4": "/static/media/stockholm.fb098606ad437407dfed.mp4",
+    "static/media/midnight-sun.jpg": "/static/media/midnight-sun.e6ff3f71a5cc55dab662.jpg",
+    "static/media/stockholm.jpg": "/static/media/stockholm.875b1c5f1c9fdb856c90.jpg",
+    "static/media/orebro.jpg": "/static/media/orebro.eea5fb78ec86461331d0.jpg",
+    "static/media/gottenburg.jpg": "/static/media/gottenburg.e3a9b4ab0cae84f08e07.jpg",
+    "static/media/sweden-hero.jpg": "/static/media/sweden-hero.56f13cebd7dbef963996.jpg",
+    "static/media/earth-texture.jpg": "/static/media/earth-texture.36f11e5e8af29fc1457e.jpg",
+    "static/media/linkoping.jpg": "/static/media/linkoping.bbbf838da0e25ce43bf0.jpg",
+    "static/media/upssala.jpg": "/static/media/upssala.15b2b0203559fb890a47.jpg",
+    "static/media/malmo.jpg": "/static/media/malmo.58f28aa963cf541ab493.jpg",
+    "static/media/earth.png": "/static/media/earth.5e54b67699317850088a.png",
+    "static/media/supun-chathuranga.jpg": "/static/media/supun-chathuranga.c8f5cecc8279df243d61.jpg",
+    "static/media/northern-lights.jpg": "/static/media/northern-lights.83a8a7d273bcb2fc82c8.jpg",
+    "static/media/esther-cole.jpg": "/static/media/esther-cole.9cbd21068a6fbe56db1f.jpg",
+    "static/media/iter-logo.png": "/static/media/iter-logo.635c5eaa25c3444987c9.png",
+    "static/media/fika.jpg": "/static/media/fika.14db8bfbc854f41fd504.jpg",
+    "index.html": "/index.html",
+    "main.76c62744.css.map": "/static/css/main.76c62744.css.map",
+    "main.e6140d7b.js.map": "/static/js/main.e6140d7b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.76c62744.css",
+    "static/js/main.e6140d7b.js"
+  ]
+}
