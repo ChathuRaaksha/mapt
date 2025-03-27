@@ -21,11 +21,14 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
+      - name: Set Version from package.json
+        run: echo "REACT_APP_VERSION=$(node -p "require('./package.json').version")" >> .env.production
+
       - name: Build Project
         run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build  # Change if your output folder is different
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Ensure this token has correct permissions
+          publish_dir: ./build
