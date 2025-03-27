@@ -2,13 +2,13 @@
 .hero-section {
     background-size: cover;
     background-position: center;
-    min-height: 80vh;
+    min-height: 95vh;
     display: flex;
     align-items: center;
     background-attachment: fixed;
     width: 100vw;
     margin-left: -1vw;
-    margin-right: -50vw;
+    margin-right: -5vw;
   }
   
   .main-content {
@@ -298,4 +298,24 @@
 .destination-card .card-body {
   flex: 1;
   overflow-y: auto;
+}
+
+/* Video section */
+.video-section {
+  background: linear-gradient(135deg,#800080, #ff8000, #800080);
+  margin-left: -1.5vb;
+  margin-right: -1vb;
+  margin-top: 2vb;
+  margin-bottom: 2vb;
+  border-radius: 8vb;
+}
+
+.home-video {
+  width: 100%;
+  max-width: 150%; /* Fixed max width */
+  height: 400px; /* Fixed height */
+  object-fit: cover; /* Crops video to fit */
+  display: block;
+  margin: 0 auto;
+  border-radius: 5vb;
 }
