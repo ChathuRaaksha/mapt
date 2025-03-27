@@ -1,4 +1,3 @@
-// src/components/InteractiveGlobe.tsx
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
@@ -11,8 +10,10 @@ const InteractiveGlobe: React.FC = () => {
   useEffect(() => {
     if (!mountRef.current) return;
 
-    while (mountRef.current.firstChild) {
-      mountRef.current.removeChild(mountRef.current.firstChild);
+    const mountElement = mountRef.current; // Store the reference to the mount element
+
+    while (mountElement.firstChild) {
+      mountElement.removeChild(mountElement.firstChild);
     }
 
     const scene = new THREE.Scene();
@@ -21,7 +22,7 @@ const InteractiveGlobe: React.FC = () => {
     renderer.setSize(600, 600);
     renderer.setClearColor(0x000000, 0);
     rendererRef.current = renderer;
-    mountRef.current.appendChild(renderer.domElement);
+    mountElement.appendChild(renderer.domElement);
 
     const geometry = new THREE.SphereGeometry(5, 32, 32);
     const texture = new THREE.TextureLoader().load(earthTexture);
@@ -56,9 +57,8 @@ const InteractiveGlobe: React.FC = () => {
     controls.enableDamping = true;
     controls.dampingFactor = 0.05;
     controls.enableZoom = true;
-    // Enable auto-rotation by default
     controls.autoRotate = true;
-    controls.autoRotateSpeed = 1.0; // Adjust speed (default 2.0, lower is slower)
+    controls.autoRotateSpeed = 1.0;
 
     const raycaster = new THREE.Raycaster();
     const mouse = new THREE.Vector2();
@@ -81,15 +81,15 @@ const InteractiveGlobe: React.FC = () => {
 
     const animate = () => {
       requestAnimationFrame(animate);
-      controls.update(); // Updates auto-rotation and user interaction
+      controls.update();
       renderer.render(scene, camera);
     };
     animate();
 
     return () => {
       renderer.domElement.removeEventListener('click', onClick);
-      if (mountRef.current && rendererRef.current) {
-        mountRef.current.removeChild(rendererRef.current.domElement);
+      if (mountElement && rendererRef.current) {
+        mountElement.removeChild(rendererRef.current.domElement);
       }
     };
   }, []);
