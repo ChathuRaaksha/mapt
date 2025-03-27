@@ -14,7 +14,7 @@ import './assets/styles/global.css';
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/mapt"> 
       <div className="app">
         <NavbarComponent />
         <Container fluid className="main-content">
